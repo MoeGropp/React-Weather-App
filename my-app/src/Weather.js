@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 
 export default function Weather() {
@@ -21,7 +22,7 @@ export default function Weather() {
     event.preventDefault();
     let apiKey = "88e0d667a1fd1dd87882eeeb4f42a013";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    
+    axios.get(apiUrl).then(showResults);
   }
 
   function cityChange(event) {
