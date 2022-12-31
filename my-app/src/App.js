@@ -8,6 +8,7 @@ export default function App() {
     <div className="App">
       <h1>Weather App</h1>
       <Weather />
+      
     </div>
   );
 }
